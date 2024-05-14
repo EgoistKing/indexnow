@@ -1,0 +1,41 @@
+{
+  "name": "egoist/indexnow",
+  "description": "Laravel library for submitting website URLs using IndexNow to search engines.",
+  "type": "library",
+  "version": "1.0.1",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Egoist\\IndexNow\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "egoist",
+      "email": "seyrimersin@gmail.com"
+    }
+  ],
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Egoist\\IndexNow\\ServiceProvider\\IndexNowServiceProvider"
+      ],
+      "aliases": {
+        "IndexNow": "Egoist\\IndexNow\\Facades\\IndexNowFacade"
+      }
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "guzzlehttp/guzzle": "^7.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
